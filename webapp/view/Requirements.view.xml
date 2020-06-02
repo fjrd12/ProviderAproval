@@ -1,10 +1,37 @@
-<mvc:View controllerName="Provider.evaluation.ProviderEvaluation.controller.Requirements" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-	xmlns="sap.m">
+<mvc:View controllerName="Provider.evaluation.ProviderEvaluation.controller.Requirements" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns="sap.m" displayBlock="true">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="AprovalForm" title="{i18n>title}">
-					<content></content>
+					<content>
+						<l:VerticalLayout id="containerLayout" width="100%">
+							<l:BlockLayout id="BlockLayout" background="{/selectedBackground}">
+								<l:BlockLayoutRow accentCells="Accent1">
+									<l:BlockLayoutCell id="Accent1" width="2">
+										<form:SimpleForm editable="true" backgroundDesign="Transparent">
+											<Label text="{i18n>NombreSol}" required="true"/>
+											<Input value="{/NombreSol}" liveChange="checkCreditCardStep" valueLiveUpdate="true"/>
+											<Label text="{i18n>NumReq}" required="true"/>
+											<Input value="{/NumReq}"/>
+											<Label text="{i18n>Solpor}"/>
+											<Input value="{/Solpor}" required="true"/>
+											<Label text="{i18n>AreaNegocio}"/>
+											<Input value="{/AreaNeg}" required="true"/>
+											<Label text="{i18n>ActvAfect}"/>
+											<Input value="{/ActAfect}" required="true"/>
+											<Label text="{i18n>ProcNeg}"/>
+											<Input value="{/ProcNeg}" required="true"/>
+											<Label text="{i18n>Fecha}" required="true"/>
+											<DatePicker value="{/Fecha}"/>
+											<Label text="{i18n>Elaboro}"/>
+											<Input value="{/Elaboro}" required="true"/>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+							</l:BlockLayout>
+						</l:VerticalLayout>
+					</content>
 				</Page>
 			</pages>
 		</App>
