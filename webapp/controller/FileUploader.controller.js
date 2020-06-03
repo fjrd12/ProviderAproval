@@ -31,12 +31,16 @@ sap.ui.define([
 			var oUploadCollection = this.byId("UploadCollection");
 			var cFiles = oUploadCollection.getItems().length;
 			var uploadInfo = cFiles + " file(s)";
-            MessageToast.show(cFiles);
+            
 			if (cFiles > 0) {
 				oUploadCollection.upload();
 				MessageToast.show("Method Upload is called (" + uploadInfo + ")");
 				MessageBox.information("Uploaded " + uploadInfo);
 			}
+			else{
+			    MessageToast.show("{i18n>nofiles}");	
+			}
+			
 		},
 		onBeforeUploadStarts: function (oEvent) {
 			// Header Slug
