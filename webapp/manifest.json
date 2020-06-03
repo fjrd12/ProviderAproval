@@ -33,10 +33,10 @@
 	"sap.ui5": {
 		"flexEnabled": false,
 		"rootView": {
-			"viewName": "Provider.evaluation.ProviderEvaluation.view.Requirements",
+			"viewName": "Provider.evaluation.ProviderEvaluation.view.FileUploader",
 			"type": "XML",
 			"async": true,
-			"id": "Requirements"
+			"id": "FileUploader"
 		},
 		"dependencies": {
 			"minUI5Version": "1.65.6",
@@ -79,18 +79,24 @@
 					"target": [
 						"RouteRequirements"
 					]
+				},
+				{
+					"name": "RouteFileUploader",
+					"pattern": "RouteFileUploader",
+					"target": [
+						"FileUploader"
+					]
 				}
 			],
 			"targets": {
 				"TargetRequirements": {
 					"viewType": "XML",
-					"transition": "slide",
-					"clearControlAggregation": false,
 					"viewId": "Requirements",
 					"viewName": "Requirements"
 				},
 				"FileUploader": {
 					"viewType": "XML",
+					"viewId": "FileUploader",
 					"viewName": "FileUploader"
 				}
 			}
