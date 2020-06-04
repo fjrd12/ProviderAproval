@@ -98,6 +98,10 @@
 					"viewType": "XML",
 					"viewId": "FileUploader",
 					"viewName": "FileUploader"
+				},
+				"ProviderInfo": {
+					"viewType": "XML",
+					"viewName": "ProviderInfo"
 				}
 			}
 		}

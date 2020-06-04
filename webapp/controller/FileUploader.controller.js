@@ -33,6 +33,11 @@ sap.ui.define([
 			var uploadInfo = cFiles + " file(s)";
             
 			if (cFiles > 0) {
+
+				for (var i = 0; i < oUploadCollection.getItems().length; i++) 
+				{   var attributes = oUploadCollection.getItems()[i].getUrl();
+					alert(attributes);
+				}
 				oUploadCollection.upload();
 				MessageToast.show("Method Upload is called (" + uploadInfo + ")");
 				MessageBox.information("Uploaded " + uploadInfo);
